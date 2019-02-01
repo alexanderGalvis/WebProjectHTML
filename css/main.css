@@ -81,23 +81,50 @@ header #pre_section i, header #next_section i {
     left: 0;
 }
 #slider #home {
-    height: 500px;
-    background: orange;
+    background: #233D58;
+    position: relative;
+    text-align: center;
+    padding-bottom: 50px;
+}
+#slider #home i {
+    color: white;
+}
+#slider #home .mainAnimation {
+    width: 80%;
+    margin-left: 10%;
+    min-height: 300px;
+    position: absolute;
+}
+#slider #home .mainlogo {
+    position: relative;
+    width: 60vw;
+    margin-left: 20vw;
+    min-height: 430px;
+}
+#slider #home .mainlogo h2 {
+    font-size: 1.2em;
+    padding-top: 80px;
+    color: white;
+    font-weight: lighter;
+}
+#slider #home .mainlogo strong {
+    font-size: 2em;
+    display: block;
+}
+#slider #home .mainlogo figure {
+    width: 100%;
+    margin: 0;
 }
 #slider #aboutme {
-    height: 400px;
     background: green;
 }
 #slider #skills {
-    height: 300px;
     background: purple;
 }
 #slider #portafolio {
-    height: 200px;
     background: blue;
 }
 #slider #blog {
-    height: 100px;
     background: yellow;
 }
 #conctact_form {
@@ -166,21 +193,21 @@ header #pre_section i, header #next_section i {
 }
 
 @media screen and (min-width: 480px){
-    body {
-        background: red;
+    #slider #home .mainlogo {
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+    }
+    #slider #home .mainlogo h2 {
+        font-size: 1.4em;
     }
 }
 
 @media screen and (min-width: 600px){
-    body {
-        background: orange;
-    }
+
 }
 
 @media screen and (min-width: 767px){
-    body {
-        background: yellow;
-    }
     header {
         height: 50px;
     }
@@ -270,7 +297,5 @@ header #pre_section i, header #next_section i {
 }
 
 @media screen and (min-width: 950px){
-    body {
-        background: green;
-    }
+
 }
