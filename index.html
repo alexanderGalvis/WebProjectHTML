@@ -28,12 +28,12 @@
                 <i class="fas fa-times-circle fa-2x"></i>
             </figure>
             <ul>
-                <li><a href="#"  onclick="navSection('home')">Home</a></li>
+                <li><a href="#" onclick="navSection('home')">Home</a></li>
                 <li><a href="#" onclick="navSection('aboutme')">Sobre mí</a></li>
                 <li><a href="#" onclick="navSection('skills')">Skills</a></li>
                 <li><a href="#" onclick="navSection('portafolio')">Portafolio</a></li>
                 <li><a href="#" onclick="navSection('blog')">Blog</a></li>
-                <li><a href="#" onclick="navSection('')">Contacto</a></li>
+                <li><a href="#" onclick="displayContact('block')">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -52,26 +52,42 @@
     <section class="slide" id="portafolio" style="display: none"></section>
     <section class="slide" id="blog" style="display: none"></section>
 </div>
-<script>
-    var sections = new Array(5);
-    sections[0] = "home";
-    sections[1] = "aboutme";
-    sections[2] = "skills";
-    sections[3] = "portafolio";
-    sections[4] = "blog";
 
+<div id="conctact_form">
+    <form action="" id="form1" name="form1" method="post">
+        <div id="close_form" onclick="displayContact('none')">
+            <i class="fas fa-times-circle fa-2x"></i>
+        </div>
+        <figure>
+            <i class="fas fa-envelope-open fa-7x"></i>
+        </figure>
+        <p>¡Dí Hola!</p>
+        <input type="text" id="name" placeholder="Tu nombre"
+               onfocus="if (this.placeholder === '') this.placeholder = 'Tu nombre'">
+        <input type="text" id="email" placeholder="Tu Email"
+               onfocus="if (this.placeholder === '') this.placeholder = 'Tu Email'">
+        <textarea name="message" id="message" placeholder="Tu Mensaje"
+                  onfocus="if (this.placeholder === '') this.placeholder = 'Tu Mensaje'"></textarea>
+        <input type="submit" name="Submit" id="button" value="Enviar">
+    </form>
+</div>
+<div id="contact_button" onclick="displayContact('block')">
+    <i class="fab fa-telegram-plane fa-3x"></i>
+</div>
+<script>
     alertSize();
+
     function alertSize() {
         var myWidth = 0, myHeight = 0;
-        if( typeof( window.innerWidth ) == 'number' ) {
+        if (typeof (window.innerWidth) == 'number') {
             //No-IE
             myWidth = window.innerWidth;
             myHeight = window.innerHeight;
-        } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+        } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
             //IE 6+
             myWidth = document.documentElement.clientWidth;
             myHeight = document.documentElement.clientHeight;
-        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
             //IE 4 compatible
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
@@ -80,10 +96,11 @@
         var cardMenu = document.getElementById("card_menu");
         if (myWidth < 767) {
             cardMenu.style.display = "none";
-        }  else {
+        } else {
             cardMenu.style.display = "block";
         }
     }
+
     function displayMenu() {
         var display;
         var cardMenu = document.getElementById("card_menu");
@@ -94,9 +111,17 @@
             cardMenu.style.display = "none";
         }
     }
+
+    var sections = new Array(5);
+    sections[0] = "home";
+    sections[1] = "aboutme";
+    sections[2] = "skills";
+    sections[3] = "portafolio";
+    sections[4] = "blog";
+
     function navSection(section) {
         let search;
-        for (i = 0; i < sections.length; i ++) {
+        for (i = 0; i < sections.length; i++) {
             search = document.getElementById(sections[i]);
             search.style.display = "none";
             if (sections[i] === section) {
@@ -105,21 +130,22 @@
             }
         }
     }
+
     function displaySection(value) {
         let search;
         let show;
-        for (i = 0; i < sections.length; i ++) {
-           search = document.getElementById(sections[i]);
+        for (i = 0; i < sections.length; i++) {
+            search = document.getElementById(sections[i]);
             show = search.style.display;
             if (show === "block") {
                 search.style.display = "none";
-                if (value === 'next'){
-                    i ++;
+                if (value === 'next') {
+                    i++;
                     if (i > 4)
                         i = 0;
                 }
-                if (value === 'prev'){
-                    i --;
+                if (value === 'prev') {
+                    i--;
                     if (i < 0)
                         i = 4;
                 }
@@ -130,6 +156,7 @@
         }
         setColorMenuBody(i);
     }
+
     function setColorMenuBody(i) {
         let bgr_body;
         let bgr_menu;
@@ -145,6 +172,12 @@
         search.style.background = bgr_body;
         var menu = document.getElementsByTagName("header")[0];
         menu.style.background = bgr_menu;
+    }
+
+    function displayContact(status) {
+        var form = document.getElementById('conctact_form');
+        form.style.display = status;
+
     }
 </script>
 </body>

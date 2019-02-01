@@ -100,6 +100,70 @@ header #pre_section i, header #next_section i {
     height: 100px;
     background: yellow;
 }
+#conctact_form {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 250px;
+    background: white;
+    border-top: 1px solid black;
+    box-shadow: 0 0 3px #9F9E9E;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+}
+
+#conctact_form #close_form i{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 85%;
+    top: 140px;
+    color: #29abe2;
+}
+#conctact_form #close_form:hover {
+    cursor: pointer;
+}
+#conctact_form figure {
+    height: 130px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #29abe2;
+}
+#conctact_form p {
+    margin: 20px 0 20px 5%;
+    width: 90%;
+}
+#conctact_form input,
+#conctact_form textarea {
+    display: block;
+    margin: 20px 50px 0 5%;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+#conctact_form #button {
+    background: #F8931F;
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+#contact_button {
+    width: 60px;
+    height: 60px;
+    color: #F8931F;
+    position: fixed;
+    top: 80vh;
+    right: 10px;
+    text-align: center;
+}
+#contact_button:hover {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 480px){
     body {
@@ -195,6 +259,13 @@ header #pre_section i, header #next_section i {
     }
     .fa-lg {
         font-size: 42px;
+    }
+    #conctact_form {
+       top: 50px;
+        width: 400px;
+    }
+    #contact_button {
+        right: 45px;
     }
 }
 
