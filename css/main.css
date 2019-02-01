@@ -1,7 +1,6 @@
 body {
     font-size: 16px;
     font-family: 'Happy Monkey', cursive;
-    background: red;
     position: relative;
 }
 header {
@@ -9,6 +8,7 @@ header {
     height: 35px;
     background: #233D58;
     position: relative;
+    z-index: 999;
 }
 header h1 {
     display: none;
@@ -77,7 +77,7 @@ header #pre_section i, header #next_section i {
 #slider section.slide {
     position: absolute;
     width: 100%;
-    top: 0;
+    top: -19px;
     left: 0;
 }
 #slider #home {
@@ -114,6 +114,24 @@ header #pre_section i, header #next_section i {
 #slider #home .mainlogo figure {
     width: 100%;
     margin: 0;
+}
+#slider #home .buttonpage {
+    width: 350px;
+}
+#slider #home .buttonpage > * {
+    display: inline-block;
+    width: 40%;
+    margin: 5px 2.5%;
+    color: white;
+    padding: 15px 2.5%;
+}
+#slider #home #contratame {
+    cursor: pointer;
+    background: #F8931F;
+}
+#slider #home a {
+    text-decoration: none;
+    background: #29abe2;
 }
 #slider #aboutme {
     background: green;
@@ -200,6 +218,9 @@ header #pre_section i, header #next_section i {
     }
     #slider #home .mainlogo h2 {
         font-size: 1.4em;
+    }
+    #slider #home .buttonpage {
+        width: 350px;
     }
 }
 
