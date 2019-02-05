@@ -3,6 +3,23 @@ body {
     font-family: 'Happy Monkey', cursive;
     position: relative;
 }
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
 header {
     width: 100%;
     height: 35px;
@@ -72,7 +89,7 @@ header #pre_section i, header #next_section i {
     width: 100%;
     position: relative;
     height: 600px;
-    background: black;
+
 }
 #slider section.slide {
     position: absolute;
@@ -84,7 +101,7 @@ header #pre_section i, header #next_section i {
     background: #233D58;
     position: relative;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 170px;
 }
 #slider #home i {
     color: white;
@@ -116,11 +133,13 @@ header #pre_section i, header #next_section i {
     margin: 0;
 }
 #slider #home .buttonpage {
-    width: 350px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
 }
 #slider #home .buttonpage > * {
     display: inline-block;
-    width: 40%;
+    width: 45%;
     margin: 5px 2.5%;
     color: white;
     padding: 15px 2.5%;
@@ -202,14 +221,57 @@ header #pre_section i, header #next_section i {
     height: 60px;
     color: #F8931F;
     position: fixed;
-    top: 80vh;
+    top: 65vh;
     right: 10px;
     text-align: center;
+    display: none;
 }
 #contact_button:hover {
     cursor: pointer;
 }
-
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 150px;
+    position: fixed;
+    bottom: -115px;
+    transition-duration: 0.4s;
+}
+footer .footer_button {
+    color: white;
+    position: relative;
+    display: block;
+    background: black;
+}
+footer:hover {
+    bottom: 0;
+}
+footer .rrss {
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+footer .rrss a {
+    display: inline-block;
+    position: relative;
+}
+footer .rrss a:before {
+    text-decoration: none;
+}
+footer .rrss a figure {
+    margin: 0 10px;
+}
+footer .rrss a i {
+    color: #3b5998;
+}
+footer p {
+    font-size: 0.8em;
+    font-weight: lighter;
+}
 @media screen and (min-width: 480px){
     #slider #home .mainlogo {
         width: 270px;
@@ -314,6 +376,7 @@ header #pre_section i, header #next_section i {
     }
     #contact_button {
         right: 45px;
+        display: block;
     }
 }
 

@@ -9,6 +9,7 @@
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/modernizr-custom.js"></script>
+
 </head>
 <body>
 <header>
@@ -48,7 +49,7 @@
 <div id="slider">
     <section class="slide" id="home" style="display: block">
         <div class="mainAnimation">
-
+            <div id="particles-js"></div>
         </div>
         <div class="mainlogo">
             <h2>Soy un <strong>Ingeniero</strong></h2>
@@ -58,7 +59,7 @@
         </div>
         <div class="buttonpage">
             <div id="contratame" onclick="displayContact('block')">CONTRATAME</div>
-            <a href="docs/HV.txt">DESCARGAR HV</a>
+            <a href="docs/HV.txt" target="_blank">DESCARGAR HV</a>
         </div>
     </section>
     <section class="slide" id="aboutme" style="display: none"></section>
@@ -89,7 +90,18 @@
     <i class="fab fa-telegram-plane fa-3x"></i>
 </div>
 <footer>
-
+    <div class="footer_button">
+        <i class="fas fa-chevron-up fa-3x"></i>
+    </div>
+    <div class="rrss">
+        <a href="#">
+            <figure><i class="fab fa-facebook fa-2x"></i></figure>
+        </a>
+        <a href="#">
+            <figure><i class="fab fa-twitter fa-2x"></i></figure>
+        </a>
+    </div>
+    <p>© 2019 All rights reserved | Privacity Policy</p>
 </footer>
 <script>
     alertSize();
@@ -197,5 +209,7 @@
 
     }
 </script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
